@@ -286,3 +286,7 @@ __pycache__/
 *.btm.cs
 *.odx.cs
 *.xsd.cs
+/MovieDTT/MovieDTT.Tests
+/MovieDTT/MovieDTT.iOS
+/MovieDTT/MovieDTT.Droid
+/MovieDTT/MovieDTT
