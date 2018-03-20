@@ -7,11 +7,11 @@
             prism:ViewModelLocator.AutowireViewModel="True"
 			Title="Movie List"
 			x:Class="MovieDTT.Views.HomePage">
-	<TabbedPage.ToolbarItems>
+	<!--<TabbedPage.ToolbarItems>
 	    <ToolbarItem Name="MenuItem1" Order="Primary" Command="{Binding NavigateToUriCommand}" 
 				CommandParameter="{x:Static appInfo:Constants.SearchMoviePage}"
 		Icon="ic_search" Text="Search" Priority="0" />
-	</TabbedPage.ToolbarItems>
+	</TabbedPage.ToolbarItems>-->
     <views:MostPopularPage Icon="ic_grade.png" />
     <views:InTheatersPage Icon="ic_theaters.png" />
     <views:ComingSoonPage Icon="ic_watch_later.png" />
