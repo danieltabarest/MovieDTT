@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2002
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieDTT", "MovieDTT\MovieDTT\MovieDTT.csproj", "{66A54CF3-6639-4093-84A1-3C4ED6079747}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieDTT.Droid", "MovieDTT\MovieDTT.Droid\MovieDTT.Droid.csproj", "{52044E72-2116-4579-B9D5-734A3C153F89}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieDTT.iOS", "MovieDTT\MovieDTT.iOS\MovieDTT.iOS.csproj", "{777C40C2-0605-483E-AE10-3EE0E055B593}"
@@ -12,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieDTT.Tests", "MovieDTT\MovieDTT.Tests\MovieDTT.Tests.csproj", "{A427CD0C-75CD-43D7-A403-0C933B80028E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieDTT.Core", "MovieDTT\MovieDTT.Core\MovieDTT.Core.csproj", "{94767FC4-78F3-47D7-B895-2B30D306384B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieDTT", "MovieDTT\MovieDTT\MovieDTT.csproj", "{66A54CF3-6639-4093-84A1-3C4ED6079747}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,18 +23,6 @@ Global
 		Release|iPhoneSimulator = Release|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{66A54CF3-6639-4093-84A1-3C4ED6079747}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{66A54CF3-6639-4093-84A1-3C4ED6079747}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{66A54CF3-6639-4093-84A1-3C4ED6079747}.Debug|iPhone.ActiveCfg = Debug|Any CPU
-		{66A54CF3-6639-4093-84A1-3C4ED6079747}.Debug|iPhone.Build.0 = Debug|Any CPU
-		{66A54CF3-6639-4093-84A1-3C4ED6079747}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
-		{66A54CF3-6639-4093-84A1-3C4ED6079747}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
-		{66A54CF3-6639-4093-84A1-3C4ED6079747}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{66A54CF3-6639-4093-84A1-3C4ED6079747}.Release|Any CPU.Build.0 = Release|Any CPU
-		{66A54CF3-6639-4093-84A1-3C4ED6079747}.Release|iPhone.ActiveCfg = Release|Any CPU
-		{66A54CF3-6639-4093-84A1-3C4ED6079747}.Release|iPhone.Build.0 = Release|Any CPU
-		{66A54CF3-6639-4093-84A1-3C4ED6079747}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{66A54CF3-6639-4093-84A1-3C4ED6079747}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{52044E72-2116-4579-B9D5-734A3C153F89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{52044E72-2116-4579-B9D5-734A3C153F89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52044E72-2116-4579-B9D5-734A3C153F89}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
@@ -87,6 +75,18 @@ Global
 		{94767FC4-78F3-47D7-B895-2B30D306384B}.Release|iPhone.Build.0 = Release|Any CPU
 		{94767FC4-78F3-47D7-B895-2B30D306384B}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{94767FC4-78F3-47D7-B895-2B30D306384B}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{66A54CF3-6639-4093-84A1-3C4ED6079747}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66A54CF3-6639-4093-84A1-3C4ED6079747}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66A54CF3-6639-4093-84A1-3C4ED6079747}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{66A54CF3-6639-4093-84A1-3C4ED6079747}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{66A54CF3-6639-4093-84A1-3C4ED6079747}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{66A54CF3-6639-4093-84A1-3C4ED6079747}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{66A54CF3-6639-4093-84A1-3C4ED6079747}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66A54CF3-6639-4093-84A1-3C4ED6079747}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66A54CF3-6639-4093-84A1-3C4ED6079747}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{66A54CF3-6639-4093-84A1-3C4ED6079747}.Release|iPhone.Build.0 = Release|Any CPU
+		{66A54CF3-6639-4093-84A1-3C4ED6079747}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{66A54CF3-6639-4093-84A1-3C4ED6079747}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
