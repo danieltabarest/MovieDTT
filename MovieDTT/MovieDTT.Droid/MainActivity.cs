@@ -14,40 +14,34 @@ using Xamarin.Forms.Platform.Android;
 
 namespace MovieDTT.Droid
 {
-	[Activity(Label = "MovieDTT.Droid", Theme = "@style/splashscreen", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-	public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
-	{
-		protected override void OnCreate(Bundle bundle)
-		{
-            try
-            {
-                FormsAppCompatActivity.ToolbarResource = Resource.Layout.toolbar;
-                FormsAppCompatActivity.TabLayoutResource = Resource.Layout.tabs;
+    [Activity(Label = "MovieDTT", Theme = "@style/splashscreen", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
+    {
+        protected override void OnCreate(Bundle bundle)
+        {
 
-                base.SetTheme(Resource.Style.MyTheme);
+            FormsAppCompatActivity.ToolbarResource = Resource.Layout.toolbar;
+            FormsAppCompatActivity.TabLayoutResource = Resource.Layout.tabs;
 
-                FFImageLoading.Forms.Droid.CachedImageRenderer.Init();
+            base.SetTheme(Resource.Style.MyTheme);
 
-                base.OnCreate(bundle);
+            FFImageLoading.Forms.Droid.CachedImageRenderer.Init();
 
-                UserDialogs.Init(this);
+            base.OnCreate(bundle);
 
-                global::Xamarin.Forms.Forms.Init(this, bundle);
+            UserDialogs.Init(this);
 
-                LoadApplication(new App(new AndroidInitializer()));
-            }
-            catch (Exception ex)
-            {
+            global::Xamarin.Forms.Forms.Init(this, bundle);
 
-            }
-		}
-	}
+            LoadApplication(new App(new AndroidInitializer()));
+        }
+    }
 
-	public class AndroidInitializer : IPlatformInitializer
-	{
-		public void RegisterTypes(IUnityContainer container)
-		{
+    public class AndroidInitializer : IPlatformInitializer
+    {
+        public void RegisterTypes(IUnityContainer container)
+        {
 
-		}
-	}
+        }
+    }
 }
