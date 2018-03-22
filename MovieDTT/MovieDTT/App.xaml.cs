@@ -29,7 +29,7 @@ namespace MovieDTT
 			{
                 UserService us = new UserService();
 
-                //_userAuthenticated = us.IsUserAuthenticated();
+                _userAuthenticated = us.IsUserAuthenticated();
 
 				InitializeComponent();	
                
