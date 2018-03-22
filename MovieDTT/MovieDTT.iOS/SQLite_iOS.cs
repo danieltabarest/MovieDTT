@@ -1,4 +1,3 @@
-using MovieDTT.Interfaces;
 using MovieDTT.iOS;
 using System;
 using System.Collections.Generic;
@@ -10,6 +9,7 @@ using SQLite.Net.Async;
 using SQLite.Net;
 using SQLite.Net.Platform.XamarinIOS;
 using System.Diagnostics;
+using MovieDTT.Interfaces;
 
 [assembly: Dependency(typeof(SQLite_iOS))]
 namespace MovieDTT.iOS
