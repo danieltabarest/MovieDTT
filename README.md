@@ -25,4 +25,3 @@ The Application has the screen user registration and log in, screen authenticati
 
 # IOS:
 ![alt text](https://github.com/danieltabarest/MovieDTT/blob/development/Screenshots/ios.gif)
-
