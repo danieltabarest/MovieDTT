@@ -10,8 +10,8 @@
 
 # Structure Project:
 - MovieDTT.Droid, Android project.
-- MovieDTT.Droid.iOS, for an iOS project.
-- MovieDTT.Droid.Tests Unit test project
+- MovieDTT.iOS, for an iOS project.
+- MovieDTT.Tests Unit test project
 - MovieDTT PLC project
 
 The Application has the screen user registration and log in, screen authentication,add movies to watchlist,,screen movies, see details, create the lists.
