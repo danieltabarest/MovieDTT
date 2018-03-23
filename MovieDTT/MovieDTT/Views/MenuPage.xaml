@@ -9,7 +9,7 @@
                   x:Class="MovieDTT.Views.MenuPage"
 	BackgroundColor="Transparent">
   <MasterDetailPage.Master>
-        <ContentPage Title="MovieDTT" Padding="0,20,0,0" BackgroundColor="#13796C" >
+        <ContentPage Title="MovieDTT" Padding="0,20,0,0" BackgroundColor="#11a6d2" >
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
@@ -35,7 +35,7 @@
                     </StackLayout>
                 </StackLayout>
 
-                <ListView ItemsSource="{Binding MenuItemsList}" x:Name="lsMenu" Grid.Row="1" Grid.Column="0" BackgroundColor="#13796C"
+                <ListView ItemsSource="{Binding MenuItemsList}" x:Name="lsMenu" Grid.Row="1" Grid.Column="0" BackgroundColor="#11a6d2"
 		            RowHeight="50" 
 		            CachingStrategy="RecycleElement">
                     <behaviors:Interaction.Behaviors>

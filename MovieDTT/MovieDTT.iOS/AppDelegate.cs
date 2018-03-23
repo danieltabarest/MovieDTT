@@ -27,7 +27,7 @@ namespace MovieDTT.iOS
 		{
 			FFImageLoading.Forms.Touch.CachedImageRenderer.Init();
 
-			UINavigationBar.Appearance.BarTintColor = UIColor.FromRGB(19, 121, 108);
+			UINavigationBar.Appearance.BarTintColor = UIColor.FromRGB(180, 229, 93);
 			UINavigationBar.Appearance.TintColor = UIColor.White;
 
 			global::Xamarin.Forms.Forms.Init();
