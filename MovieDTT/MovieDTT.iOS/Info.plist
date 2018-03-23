@@ -5,7 +5,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>MovieDTT</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.mcvdev.MovieDTT</string>
+	<string>com.dev.MovieDTT</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
