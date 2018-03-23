@@ -16,4 +16,9 @@
 
 The Application has the screen user registration and log in, screen authentication,add movies to watchlist,,screen movies, see details, create the lists.
 
+# Android:
+![alt text](https://github.com/danieltabarest/MovieDTT/blob/development/Screenshots/android.gif)
+
+# IOS:
+![alt text](https://github.com/danieltabarest/MovieDTT/blob/development/Screenshots/ios.gif)
 
