@@ -44,7 +44,6 @@ namespace MovieDTT.ViewModels
             var connectionService = Xamarin.Forms.DependencyService.Get<ISQLite>();
             _listRepo = new Repository<CustomList>(connectionService);
             _movieRepo = new Repository<MovieDTT.Models.Movie>(connectionService);
-
             Task.Run(LoadList).ConfigureAwait(true);
         }
 
@@ -122,7 +121,6 @@ namespace MovieDTT.ViewModels
                         DateAdded = DateTime.Now,
                         ListId = customList.id
                     };
-
                     await _movieRepo.Insert(newMovie);
                 }
                 else
@@ -156,9 +154,7 @@ namespace MovieDTT.ViewModels
                 Name = NewList,
                 DateAdded = DateTime.Today
             };
-
             await _listRepo.Insert(list);
-
             //refresh
             await LoadList();
         }
