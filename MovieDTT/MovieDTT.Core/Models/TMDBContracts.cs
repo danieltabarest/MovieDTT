@@ -77,7 +77,6 @@ namespace MovieDTT.Core.Models
 		public string backdrop_path { get; set; }
 		public object belongs_to_collection { get; set; }
 		public int budget { get; set; }
-		//public List<Genre> genres { get; set; }
 		public List<string> genre_ids { get; set; }
 		public string homepage { get; set; }
 		public int id { get; set; }

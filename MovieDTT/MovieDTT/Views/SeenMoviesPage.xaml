@@ -46,11 +46,6 @@
                                 <Label Text="{Binding MovieName}" FontSize="18" TextColor="#58666e" FontAttributes="Bold" />
                             </StackLayout>
                             <Label Text="Comedy, Drama, Action, Suspense" FontSize="14" TextColor="Gray" />
-                            <StackLayout Orientation="Horizontal">
-                                <!--<Button Text="+ Watchlist" Command="{Binding Source={x:Reference MyPage}, Path=BindingContext.AddWatchListCommand}" CommandParameter="{Binding .}" />
-                                <Button Text="Seen" Command="{Binding AddSeenCommand}" CommandParameter="{Binding .}" />
-                                <Button Text="+ List" Command="{Binding AddListCommand}" CommandParameter="{Binding .}" />-->
-                            </StackLayout>
                         </StackLayout>
                     </Grid>
                 </ViewCell>

@@ -48,8 +48,6 @@ namespace MovieDTT.ViewModels
 				AddWatchListCommand = new DelegateCommand(async () => await AddToWatchList());
 				AddSeenCommand = new DelegateCommand(async () => await AddToSeenList());
 				AddListCommand = new DelegateCommand(async () => await AddToList());
-
-				Task.Run(LoadExtraMovieInfo).ConfigureAwait(true);
 			}
 			catch (Exception ex)
 			{
@@ -59,28 +57,13 @@ namespace MovieDTT.ViewModels
 
 		public override void OnNavigatedTo(NavigationParameters parameters)
 		{
-			//if(MovieItem == null)
 			MovieItem = (DetailedMovie)parameters["movie"];
 		}
 
 		public override void OnNavigatedFrom(NavigationParameters parameters)
 		{
-			//if(MovieItem == null)
 			MovieItem = (DetailedMovie)parameters["movie"];
 		}
-
-        private async Task LoadExtraMovieInfo()
-        {
-            try
-            {
-				//Get Extra movie info
-				await Task.Delay(100);
-            }
-            catch (Exception ex)
-            {
-                ErrorLog.LogError("Getting Extra movie info", ex);
-            }
-        }
 
         private async Task AddToWatchList()
         {

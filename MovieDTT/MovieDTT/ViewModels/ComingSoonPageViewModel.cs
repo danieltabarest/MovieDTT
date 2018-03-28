@@ -122,7 +122,6 @@ namespace MovieDTT.ViewModels
 					MovieId = detailedMovie.Id,
 					DateAdded = DateTime.Now
 				});
-
 				await DisplayDialog("Info", "Added to Seen Movies", "Ok");
 			}
 			catch (Exception ex)
@@ -137,7 +136,6 @@ namespace MovieDTT.ViewModels
 			{
 				var param = new NavigationParameters();
 				param.Add("movie", detailedMovie);
-
 				await NavigateToUri(Constants.AddToListPage, param);
 			}
 			catch (Exception ex)
@@ -156,15 +154,6 @@ namespace MovieDTT.ViewModels
 			set
 			{
 				_isActive = value;
-				OnActiveTabChangedAsync();
-			}
-		}
-
-		private async void OnActiveTabChangedAsync()
-		{
-			if (IsActive)
-			{
-
 			}
 		}
 	}

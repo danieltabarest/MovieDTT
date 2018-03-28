@@ -16,9 +16,7 @@ namespace MovieDTT.Core.Constants
 		public const string TmdbSimilarMovies = "movie/{0}/similar?api_key={1}&language=en-US&page=1";
 		public const string TmdbMovieCredits = "movie/{0}/credits?api_key={1}";
 		public const string TmdbUpcomingMovies = "movie/upcoming?api_key={0}&language=en-US&page=1";
-
 		public const int MovieTitleMaxLength = 20;
-        
  	}
 
 	public enum DiscoverOption

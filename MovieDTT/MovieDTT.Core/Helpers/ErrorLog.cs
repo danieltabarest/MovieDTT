@@ -9,6 +9,5 @@ namespace MovieDTT.Core.Helpers
 		{
 			Debug.WriteLine("{0}. {1}", message, ex.ToString());
 		}
-
 	}
 }
