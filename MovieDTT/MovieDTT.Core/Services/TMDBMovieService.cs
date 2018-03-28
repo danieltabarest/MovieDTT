@@ -150,25 +150,7 @@ namespace MovieDTT.Core
                 var movies = JsonConvert.DeserializeObject<Movies>(json);
                 await GetConfigurationIfNeeded();
 
-                var movieList = movies.results.Select(movie => new DetailedMovie
-                {
-                    Id = movie.id,
-                    OriginalTitle = movie.original_title,
-                    ComposedTitle = string.Format("{0}{1}({2})", movie.original_title.Substring(0, Math.Min(movie.original_title.Length, AppConstants.MovieTitleMaxLength)),
-                                                  movie.original_title.Length > AppConstants.MovieTitleMaxLength
-                                                  ? "..." : " ", movie.release_date.Substring(0, 4)),
-                    Overview = movie.overview,
-                    Score = movie.vote_average,
-                    VoteCount = movie.vote_count,
-                    ImdbId = movie.imdb_id,
-                    PosterUrl = _tmdbConfiguration.images.base_url +
-                        _tmdbConfiguration.images.poster_sizes[3] +
-                        movie.poster_path,
-                    GenresCommaSeparated = GetGenresString(String.Join(", ", movie.genre_ids)),
-                    ReleaseDate = movie.release_date,
-                    Runtime = movie.runtime,
-                    Tagline = movie.tagline
-                }).ToList();
+                var movieList = movies.results.Where(x => x.original_title != null).Select(movie => GetDetailMovie(movie)).ToList();
 
                 return movieList;
             }
@@ -196,24 +178,7 @@ namespace MovieDTT.Core
                 var movie = JsonConvert.DeserializeObject<TmdbMovie>(json);
                 await GetConfigurationIfNeeded();
 
-                var detailed = new DetailedMovie
-                {
-                    OriginalTitle = movie.original_title,
-                    ComposedTitle = string.Format("{0}{1}({2})", movie.original_title.Substring(0, Math.Min(movie.original_title.Length, AppConstants.MovieTitleMaxLength)),
-                                                  movie.original_title.Length > AppConstants.MovieTitleMaxLength
-                                                  ? "..." : " ", movie.release_date.Substring(0, 4)),
-                    Overview = movie.overview,
-                    Score = movie.vote_average,
-                    VoteCount = movie.vote_count,
-                    ImdbId = movie.imdb_id,
-                    PosterUrl = _tmdbConfiguration.images.base_url +
-                        _tmdbConfiguration.images.poster_sizes[3] +
-                        movie.poster_path,
-                    GenresCommaSeparated = GetGenresString(String.Join(", ", movie.genre_ids)),
-                    ReleaseDate = movie.release_date,
-                    Runtime = movie.runtime,
-                    Tagline = movie.tagline
-                };
+                var detailed = GetDetailMovie(movie);
 
                 return detailed;
             }
@@ -227,7 +192,7 @@ namespace MovieDTT.Core
 
         private string GetGenresString(string genresIDs)
         {
-            var r = string.Empty;
+            var _gen = string.Empty;
 
             try
             {
@@ -248,12 +213,12 @@ namespace MovieDTT.Core
                         {
                             if (g != null)
                             {
-                                r = r + genreName;
+                                _gen = _gen + genreName;
                             }
 
                             if (i != ids.Count())
                             {
-                                r = r + ", ";
+                                _gen = _gen + ", ";
                             }
                         }
                     }
@@ -262,13 +227,13 @@ namespace MovieDTT.Core
             catch (Exception ex)
             {
                 ErrorLog.LogError("ERROR: Getting genres by ids", ex);
-                r = string.Empty;
+                _gen = string.Empty;
             }
 
-            return r;
+            return _gen;
         }
 
-        private void GetGenres()
+        private Genres GetGenres()
         {
             _genres = new Genres();
             var result = string.Empty;
@@ -279,10 +244,12 @@ namespace MovieDTT.Core
                 result = sr.ReadToEnd();
 
                 _genres = Newtonsoft.Json.JsonConvert.DeserializeObject<Genres>(result);
+                return _genres;
             }
             catch (Exception ex)
             {
                 ErrorLog.LogError("ERROR: Getting Genres", ex);
+                return _genres;
             }
         }
     }

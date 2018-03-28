@@ -11,7 +11,6 @@ namespace MovieDTT.Helpers
     public class MovieTemplateSelector : Xamarin.Forms.DataTemplateSelector
     {
         readonly DataTemplate MovieCard;
-        //readonly DataTemplate MovieCard2;
 
         public MovieTemplateSelector()
         {
@@ -25,12 +24,7 @@ namespace MovieDTT.Helpers
             if (movieData== null)
                 return null;
             DataTemplate selectedTemplate = MovieCard;
-                        
-            //if (eventData.isPast || eventData.IsCurrentUserOwner)
-            //    selectedTemplate = EventCard;
-            //else
-            //    selectedTemplate = EventCardInvitation;
-
+          
             return selectedTemplate;
         }
     }

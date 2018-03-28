@@ -21,9 +21,7 @@ namespace MovieDTT.ViewModels
         private readonly IRepository<MovieDTT.Models.Movie> _movieRepo;
         private DelegateCommand<ItemTappedEventArgs> _addToListCommand;
         private Command _createListCommand;
-
         public bool HasData { get; set; } = false;
-
         private DetailedMovie _selectedMovie;
 
         private string _newList;

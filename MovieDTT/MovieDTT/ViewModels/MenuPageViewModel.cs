@@ -82,6 +82,7 @@ namespace MovieDTT.ViewModels
             var menuItems = new List<MenuItem>();
 			try
 			{
+                //add an extra load time to the consumption of the method
                 await Task.Delay(10);
                 menuItems.Add(new MenuItem()
                 {

@@ -39,7 +39,6 @@ namespace MovieDTT.Tests
 			searchVM.SearchField = "memento"; //search criteria
 
 			await searchVM.SearchMovie();
-			await Task.Delay(1000);
 			Assert.IsNotNull(searchVM.SearchList);
 		}
 	}

@@ -60,19 +60,27 @@ namespace MovieDTT.ViewModels
 		{
 			get
 			{
-				if (_goToDetailPage == null)
-				{
-					_goToDetailPage = new DelegateCommand<ItemTappedEventArgs>(async selected =>
-					{
-						var param = new NavigationParameters();
-						var movie = selected.Item as DetailedMovie;
-						param.Add("movie", movie);
+                try
+                {
+                    if (_goToDetailPage == null)
+                    {
+                        _goToDetailPage = new DelegateCommand<ItemTappedEventArgs>(async selected =>
+                        {
+                            var param = new NavigationParameters();
+                            var movie = selected.Item as DetailedMovie;
+                            param.Add("movie", movie);
 
-						await NavigateToUriWithModalOption(Constants.MovieDetailPageNoNav, param, false);
-					});
-				}
+                            await NavigateToUriWithModalOption(Constants.MovieDetailPageNoNav, param, false);
+                        });
+                    }
 
-				return _goToDetailPage;
+                    return _goToDetailPage;
+                }
+                catch (Exception ex )
+                {
+                    ErrorLog.LogError("Go To Detail Page", ex); ;
+                    return _goToDetailPage;
+                }
 			}
 		}
 

@@ -163,18 +163,7 @@ namespace MovieDTT.ViewModels
 			set
 			{
 				_isActive = value;
-				OnActiveTabChangedAsync();
 			}
 		}
-
-		private async void OnActiveTabChangedAsync()
-		{
-			if (IsActive)
-			{
-
-			}
-		}
-
-
 	}
 }
