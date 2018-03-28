@@ -1,4 +1,8 @@
 # MovieDTT
+
+## Download from Play Store
+* [Android: Google Play](https://play.google.com/store/apps/details?id=com.dev.MovieDTT)
+
 # Components/Libraries:
 - The Movie Database (TMDb) API used to get Movies information.
 - Prism for Xamarin.Form
@@ -21,4 +25,3 @@ The Application has the screen user registration and log in, screen authenticati
 
 # IOS:
 ![alt text](https://github.com/danieltabarest/MovieDTT/blob/development/Screenshots/ios.gif)
-
